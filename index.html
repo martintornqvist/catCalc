@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<h1>catCalc v0.3</h1>
+<h3>Ange i <u>gram</u> hur mycket du har av varje produkt för att räkna ut antal batchar.</h3>
+
+<div class="container">
+    <form class="form" id="catCalc" method="post">
+        Hur mycket hjärta har du?<br>
+        <input type="number" id="heartInput" name="heartInput" placeholder="Amount of heart">
+            <br>
+            <br>
+
+        Hur mycket lever har du?<br>
+        <input type="number" id="liverInput" name="liverInput" placeholder="Amount of liver">
+            <br>
+            <br>
+
+        Hur mycket färs/övrigt har du?<br>
+        <input type="number" id="otherInput" name="otherInput" placeholder="Amount of other">
+            <br>
+            <br>
+        <input type="button" name="submit" value="Räkna ut" onclick="catCalc()">
+            <br>
+            <br>
+
+        Vill du hellre räkna utifrån batchar?<br>
+        <input type="number" id="batchInput" name="batchInput" placeholder="How many batches?">
+            <br>
+            <br>
+        <input type="button" name="submit1" value="Räkna batchar" onclick="batchCalc()">
+
+    </form>
+
+    <h4 id="totSum">Uträkningen visar att du behöver följande:</h4>
+    <p id="batches"></p>
+
+</div>
+<footer>
+    Last updated: 2015-04-15
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
