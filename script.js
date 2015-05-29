@@ -28,7 +28,7 @@ function catCalc(){
         totAmountOth = (heartPortions * otherDefault).toFixed(1);
         batchCount = (heartPortions / 10).toFixed(1);
         document.getElementById('totSum').innerHTML = "Du får ut drygt " + heartPortions + " portioner och du behöver " + totAmountLiv + " gram lever och " + totAmountOth + " gram övrigt.";
-        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batches med kattmat.)";
+        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batchar med kattmat.)";
     }
     if(liverValue.length > 0){
         liverPortions = (liverValue / liverDefault).toFixed(1);
@@ -36,7 +36,7 @@ function catCalc(){
         totAmountOth = (liverPortions * otherDefault).toFixed(1);
         batchCount = (liverPortions / 10).toFixed(1);
         document.getElementById('totSum').innerHTML = "Du får ut drygt " + liverPortions + " portioner och du behöver " + totAmountHeart + " gram hjärta och " + totAmountOth + " gram övrigt.";
-        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batches med kattmat.)";
+        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batchar med kattmat.)";
     }
     if(otherValue.length > 0){
         otherPortions = (otherValue / otherDefault).toFixed(1);
@@ -44,13 +44,20 @@ function catCalc(){
         totAmountLiv = (otherPortions * liverDefault).toFixed(1);
         batchCount = (otherPortions / 10).toFixed(1);
         document.getElementById('totSum').innerHTML = "Du får ut drygt " + otherPortions + " portioner och du behöver " + totAmountHeart + " gram hjärta och " + totAmountLiv + " gram lever.";
-        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batches med kattmat.)";
+        document.getElementById('batches').innerHTML = "(Detta ger cirka " + batchCount + " batchar med kattmat.)";
     }
 
 }
 
 
 
+//Reset button
+
+function resetCalc(){
+    document.getElementById('catCalc').reset();
+    document.getElementById('totSum').outerHTML='';
+    document.getElementById('batches').outerHTML='';
+}
 
 
 
